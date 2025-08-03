@@ -1,11 +1,11 @@
 [phases.setup]
-nixPkgs = ["python310", "pip", "libGL"]
+nixPkgs = ["libGL", "python310"]
 
 [phases.install]
 cmds = [
-  "python -m ensurepip --upgrade",
-  "pip install --upgrade pip",
-  "pip install -r requirements.txt"
+  "python3 -m ensurepip",
+  "python3 -m pip install --upgrade pip",
+  "python3 -m pip install -r requirements.txt"
 ]
 
 [phases.start]
