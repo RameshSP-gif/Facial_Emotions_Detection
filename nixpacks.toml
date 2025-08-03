@@ -1,9 +1,8 @@
-
 [phases.setup]
-nixPkgs = ["libGL"]
+nixPkgs = ["python310", "libGL", "pip"]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
 
 [phases.start]
 cmd = "python app.py"
